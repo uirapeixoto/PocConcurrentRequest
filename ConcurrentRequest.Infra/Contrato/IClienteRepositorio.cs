@@ -5,12 +5,8 @@ using System.Text;
 
 namespace ConcurrentRequest.Infra.Contrato
 {
-    public interface IClienteRepositorio
+    public interface IClienteRepositorio : IRepositorioBase<ClienteModel>
     {
-         IEnumerable<ClienteModel> GetAll();
-         ClienteModel Get(int id);
-         ClienteModel GetById();
-         ClienteModel Add();
 
     }
 }

@@ -4,6 +4,7 @@ using ConcurrentRequest.Infra.Contrato;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace ConcurrentRequest.Infra.Repositorio
@@ -23,19 +24,14 @@ namespace ConcurrentRequest.Infra.Repositorio
             };
         }
 
-        public ClienteModel Add()
-        {
-            throw new NotImplementedException();
-        }
-
         public IEnumerable<ClienteModel>  GetAll()
         {
             return _data;
         }
 
-        public ClienteModel GetById()
+        public ClienteModel GetById(int id)
         {
-            throw new NotImplementedException();
+            return _data.FirstOrDefault(x => x.Id == id);
         }
     }
 }

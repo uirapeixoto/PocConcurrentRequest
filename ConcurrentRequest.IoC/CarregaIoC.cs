@@ -6,7 +6,7 @@ using System;
 
 namespace ConcurrentRequest.IoC
 {
-    public class CarregaIoC
+    public static class CarregaIoC
     {
         public static void RegistraServicos(IServiceCollection services)
         {

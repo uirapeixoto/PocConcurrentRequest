@@ -21,8 +21,8 @@ namespace ConcurrentRequest.Infra.Contexto
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                //optionsBuilder.UseSqlServer("Server=NOTE\\SQLEXPRESS;Initial Catalog=DataChartDb;Integrated Security=SSPI;");
+                #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+                optionsBuilder.UseSqlServer("Server=NOTE\\SQLEXPRESS;Initial Catalog=ClienteDb;Integrated Security=SSPI;");
             }
         }
 
