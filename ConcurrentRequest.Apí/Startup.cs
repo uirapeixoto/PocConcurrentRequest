@@ -59,7 +59,7 @@ namespace ConcurrentRequest.Apí
                         .AllowCredentials();
                     });
             });
-
+            services.AddSingleton(Configuration);
             services.Configure<MvcOptions>(options => {
                 options.Filters.Add(new Microsoft.AspNetCore.Mvc.Cors.Internal.CorsAuthorizationFilterFactory("AllowAll"));
             });
@@ -71,6 +71,7 @@ namespace ConcurrentRequest.Apí
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -80,6 +81,8 @@ namespace ConcurrentRequest.Apí
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            //app.IndisponibilidadeMiddleware();
 
             app.UseHttpsRedirection();
             app.UseMvc();

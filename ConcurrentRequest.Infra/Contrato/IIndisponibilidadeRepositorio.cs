@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ConcurrentRequest.Infra.Contrato
 {
-    public interface IClienteRepositorio : IRepositorioBase<ClienteModel>
+    public interface IIndisponibilidadeRepositorio : IRepositorioBase<IndisponibilidadeModel>
     {
     }
 }
